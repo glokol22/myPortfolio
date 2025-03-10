@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+
+    <section class="header-canvas-container">
+        <div id="header-canvas-container">
+            <div class = "logo">
+                <img src="logo.png" alt="Your Logo" class="logo-image">
+            </div>
+            <header>
+                    <nav>
+                        <img src="menu-button.png" alt="Menu Button" class="menu_icon">
+                        <ul class = "navlinks">
+                            <li><a href="#about">Home</a></li>
+                            <li><a href="#projects">Portfolio</a></li>
+                            <li><a href="Geoffrey_Lokol_Resume.pdf">Resume</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+        </div>
+    </section>
+ 
+<!--     BODY CONTAINER  -->
+    <section class ="profile">
+        <div class = "header">
+            <section id="about">
+                <div class = "header-text">
+                    <h1>Geoffrey Lokol</h1>
+                    <h5>Hi I'm <span class="input">Data Analyst</span></h5>
+                    <p>Data scientist specializing in data mining, machine learning, and statistical analysis. Proficient in programming languages like Python and R, and experienced with various data visualization tools.</p>
+                    
+                    <div class = "btn-group">
+                        <a href="Geoffrey_Lokol_Resume.pdf" class="btn active">Resume</a>
+                    <!--   <a href="" class="btn">Contact</a> -->
+                    </div>
+
+                    <div>
+                        <img src="sql.png" alt="python" class="skill">
+                        <img src="python.png" alt="database" class="skill">
+                        <img src="r.png" alt="python" class="skill">
+                        <img src="powerBI.png" alt="python" class="skill">
+                    </div>
+                </div>
+        
+            </section>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2>My Portfolio</h2>
+        <div class="projects-container">
+<!-- Project 1 -->      
+            <div class="project-card">
+                <img src="data_analyst.jpg" alt="Project 1">
+                <h3>Data analysis</h3>
+                <p>Performed exploratory data analysis and visualization to uncover trends and insights. Used Python (Pandas, Matplotlib, Seaborn) and Power BI for interactive dashboards.</p>
+                <a href="https://github.com/geoffreylokol22" target="_blank">View Project</a>
+            </div>
+<!-- Project 3 -->
+        <div class="project-card">
+            <img src="web_dev.jpg" alt="Project 2">
+            <h3>Web Development</h3>
+            <p>Built a responsive portfolio website from scratch using HTML, CSS, and JavaScript. Focused on clean UI, smooth animations, and mobile optimization..</p>
+            <a href="https://github.com/geoffreylokol22" target="_black"> View Project</a>
+        </div>
+
+<!-- Project 3 -->
+            <div class="project-card">
+                <img src="ml_img.jpg" alt="Project 3">
+                <h3>Machine Learning</h3>
+                <p>Developed a sentiment analysis model to classify text data using Python (Scikit-learn, NLTK). Implemented preprocessing, feature extraction, and model evaluation.</p>
+                <a href="https://github.com/geoffreylokol22" target="_blank">View Project</a>
+            </div>
+            
+<!-- Project 4 -->
+            <div class="project-card">
+                <img src="api.jpg" alt="Project 3">
+                <h3>Web Scraping</h3>
+                <p>Automated data collection from websites using Python (BeautifulSoup, Scrapy). Extracted, cleaned, and structured data for analysis and reporting.</p>
+                <a href="https://github.com/geoffreylokol22" target="_blank">View Project</a>
+            </div>
+
+        </div>
+    </section>
+
+<!--     CONTACT FORM CONTAINER    -->
+    <section id="contact">
+       <h2>Contact Form</h2>
+       <form id="contact-form">
+           <label for="name">Name:</label><br>
+           <input type="text" id="name" name="name" required><br><br>
+
+           <label for="email">Email:</label><br>
+           <input type="email" id="email" name="email" required><br><br>
+
+           <label for="message">Message:</label><br>
+           <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+           <button type="submit">Send</button>
+       </form>
+    </section>
+
+<!--     FOOTER CONTAINER    -->
+    <footer>
+       <div class="footer-content">
+           <div class="social-icons">
+               <a href="https://github.com/geoffreylokol22" target="_blank" rel="noopener noreferrer">
+                   <img src="github_icon.png" alt="GitHub">
+               </a>
+               <a href="mailto:geoffreyesekon@gmail.com">
+                   <img src="gmail_icon.png" alt="Gmail">
+               </a>
+               <a href="https://www.linkedin.com/in/glokol/" target="_blank" rel="noopener noreferrer">
+                   <img src="linkedinlogo_icon.png" alt="LinkedIn">
+               </a>
+           </div>
+           <p>&copy; 2025 Geoffrey Lokol</p>
+       </div>
+    </footer>
+    
+   <script src="script.js"></script>
+</body>
+</html>
