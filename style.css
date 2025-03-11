@@ -66,7 +66,7 @@ canvas {
 
 
 .profile {
-    background: url(img8.jpg);
+    background: url(img2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -505,7 +505,7 @@ textarea:focus {
 #projects {
     text-align: center;
     padding: 93px 20px;
-    background: url('img10.jpg') no-repeat center;
+    background: url('img1.jpg') no-repeat center;
     background-size: cover;
     margin-bottom: 0px;
     position: relative;
