@@ -118,3 +118,18 @@ document.addEventListener('DOMContentLoaded', function() {
         smartBackspace: true 
     });
 });
+
+
+
+const skills = [
+    "SQL", "Python (Pandas, NumPy)", "Data Visualization (Power BI, Tableau)", 
+    "Machine Learning", "Exploratory Data Analysis", "A/B Testing", 
+    "Big Data (Spark, Hadoop)", "Cloud Platforms (AWS, Google Cloud)", 
+    "Business Intelligence", "Statistical Modeling"
+];
+
+const textContainer = document.getElementById("scrolling-text");
+
+// Join skills with the diamond icon separator and duplicate for seamless looping
+const textContent = skills.join(" 🔶 ");
+textContainer.innerHTML = `<span>${textContent} 🔶 ${textContent}</span>`;
