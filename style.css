@@ -83,6 +83,8 @@ nav .navlinks a {
     margin-right: 5.0rem;
     text-decoration: none;
     font-size: 12px;
+    z-index: 100; 
+    position: relative; 
 }
 
 
@@ -125,7 +127,7 @@ nav .navlinks a {
     margin-top: -42px;
 }
 
-
+/*
 .image-row img {
     width: 40px;
     border-radius: 30%;
@@ -140,6 +142,20 @@ nav .navlinks a {
     50% { transform: rotateY(180deg); }
     100% { transform: rotateY(360deg); }
 }
+*/
+
+.image-row img {
+    width: 40px;
+    border-radius: 30%;
+    margin-bottom: 39px;
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-row img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
 
 
 .header-text p {
@@ -417,13 +433,12 @@ footer {
     font-size: 12px;
 }
 
-/* Style only the email field when it's invalid */
 #email:invalid {
     border: 2px dotted orangered;
     background: floralwhite;
 }
 
-/* Optional: Improve focus effect for all inputs */
+
 input:focus,
 textarea:focus {
     border: 2px solid orangered;
@@ -534,4 +549,3 @@ textarea:focus {
         align-items: center;
     }
 }
-
