@@ -127,22 +127,6 @@ nav .navlinks a {
     margin-top: -42px;
 }
 
-/*
-.image-row img {
-    width: 40px;
-    border-radius: 30%;
-    margin-bottom: 39px;
-    background-color: rgb(255, 255, 255);
-    animation: flip 3s linear infinite;
-}
-
-
-@keyframes flip {
-    0% { transform: rotateY(0deg); }
-    50% { transform: rotateY(180deg); }
-    100% { transform: rotateY(360deg); }
-}
-*/
 
 .image-row img {
     width: 40px;
