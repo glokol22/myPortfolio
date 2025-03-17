@@ -110,9 +110,9 @@ menu_icon.addEventListener('click', function(){
 
 document.addEventListener('DOMContentLoaded', function() {
     var typed = new Typed('.input', {
-        strings: ["Data Analyst", "UX Designer", "Web Developer", "Researcher"],
-        typeSpeed: 100,
-        backSpeed: 60,
+        strings: ["Data Analyst", "Web Developer", "Researcher"],
+        typeSpeed: 40,
+        backSpeed: 40,
         loop: true,
         cursorChar: '|',
         smartBackspace: true 

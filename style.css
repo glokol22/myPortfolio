@@ -144,9 +144,6 @@ nav .navlinks a {
 
 .header-text p {
     color: #000000;
-    border-width: 2px;
-    border-color: #ff0000;
-    border-style: dotted;
     border-radius: 10px;
     background-color:snow;
     padding: 35px;
@@ -387,7 +384,7 @@ footer {
     display: flex;
     justify-content: center;  
     align-items: center;  
-    width: 30%; 
+    width: 15%; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -445,15 +442,35 @@ textarea:focus {
     background-color: #45a049;
 }
 
+@media(max-width:768px) {
+    #contact h2 {
+        text-align: center;
+        font-size: 12px;
+        background-color: aliceblue;
+        border: 1px dotted #ff0000;
+        border-radius: 15px;
+        height: 30px;
+        display: flex;
+        justify-content: center;  
+        align-items: center;  
+        width: 35%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-/* CSS Styles for the Projects Section */
+}
+
+
+
+
+
+
+
+
 #projects {
     text-align: center;
     padding: 93px 20px;
-    background: url(back.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: cover;
+    background-color: snow;
     margin-bottom: 0px;
     position: relative;
     z-index: 1;
@@ -463,7 +480,7 @@ textarea:focus {
 #projects h2 {
     margin-bottom: 60px;
     position: relative;
-    top: 20px;
+    top: -40px;
     font-size: 12px;
     background-color: aliceblue;
     border: 1px dotted #ff0000;
@@ -472,7 +489,7 @@ textarea:focus {
     display: flex;
     justify-content: center;  
     align-items: center;  
-    width: 30%; 
+    width: 15%; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -481,29 +498,40 @@ textarea:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+    row-gap: 60px;
 }
 
 .project-card {
-    width: 300px;
-    background: white;
+    width: 250px;
+    background: oldlace;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 10px 20px;
 }
 
 .project-card img {
     width: 100%;
     border-radius: 5px;
-    height: 180px;
+    height: 120px;
     object-fit: cover;
+}
+
+.project-card:hover img {
+    transform: scale(0.9);
+}
+
+.project-card:hover {
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
 .project-card h3 {
     margin: 10px 0;
     font-size: 12px;
 }
+
 
 .project-card p {
     color: #555;
@@ -522,6 +550,8 @@ textarea:focus {
     font-size: 12px;
 }
 
+
+
 .project-card a:hover {
     background: darkred;
 }
@@ -532,4 +562,35 @@ textarea:focus {
         flex-direction: column;
         align-items: center;
     }
+
+    .project-card:nth-child(odd), 
+    .project-card:nth-child(even) {
+        transform: translateY(0);
+    }
+
+    #projects h2 {
+        margin-bottom: 60px;
+        position: relative;
+        top: -40px;
+        font-size: 12px;
+        background-color: aliceblue;
+        border: 1px dotted #ff0000;
+        border-radius: 15px;
+        height: 30px;
+        display: flex;
+        justify-content: center;  
+        align-items: center;  
+        width: 25%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.project-card:nth-child(odd) {
+    transform: translateY(20px);
+}
+
+.project-card:nth-child(even) {
+    transform: translateY(-20px); 
 }
