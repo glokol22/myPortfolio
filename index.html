@@ -8,22 +8,26 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-    <header>
-        <div id="header-canvas-container">
-            <img src="logo.png" alt="Your Logo" class="logo-image">
-            <nav>
-                <img src="menu-button.png" alt="Menu Button" class="menu_icon">
-                <ul class = "navlinks">
-                    <li><a href="#about">Home</a></li>
-                    <li><a href="#projects">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    
+    <section id="header-canvas-container">
+        <img src="logo.png" alt="Your Logo" class="logo-image">
+        <nav>
+            <img src="menu-button.png" alt="Menu Button" class="menu_icon">
+            <ul class="navlinks">
+                <li><a href="#about">Home</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+
+    
+
+
 <!--     BODY CONTAINER  -->
     <section id = 'about'>
-        <div class = "header-text">
+        <div class = "about-container">
             <h1>Geoffrey Lokol</h1>
             <h5>Hi I'm <span class="input">Data Analyst</span></h5>
             <p>  A data analyst with a strong background in data extraction, 
@@ -44,42 +48,51 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
     <section id="projects">
         <h2>My Portfolio</h2>
         <div class="projects-container">
-  
-            <div class="project-card">
+
+            <div class="project-card" data-article="data_analysis_article.html">
                 <img src="data_analyst.jpg" alt="Project 1">
-                <h3>Data analysis</h3>
+                <h3>Data Analysis</h3>
                 <p>Performed exploratory data analysis and visualization to uncover trends and insights. Used Python (Pandas, Matplotlib, Seaborn) and Power BI for interactive dashboards.</p>
                 <a href="https://github.com/geoffreylokol22" target="_blank">View Project</a>
+                <button class="read-more-button" data-article="data_analysis_article.html">Read More</button>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-article="web_dev_article.html">
                 <img src="web_dev.jpg" alt="Project 2">
                 <h3>Web Development</h3>
-                <p>Built a responsive portfolio website from scratch using HTML, CSS, and JavaScript. Focused on clean UI, smooth animations, and mobile optimization..</p>
+                <p>Built a responsive portfolio website from scratch using HTML, CSS, and JavaScript. Focused on clean UI, smooth animations, and mobile optimization.</p>
                 <a href="file:///C:/Users/Administrator/Desktop/MyScripts/My_Portfolio/index.html" target="_black"> View Project</a>
+                <button class="read-more-button" data-article="web_dev_article.html">Read More</button>
             </div>
 
-
-            <div class="project-card">
+            <div class="project-card" data-article="ml_article.html">
                 <img src="ml_img.jpg" alt="Project 3">
                 <h3>Machine Learning</h3>
                 <p>Developed a sentiment analysis model to classify text data using Python (Scikit-learn, NLTK). Implemented preprocessing, feature extraction, and model evaluation.</p>
                 <a href="https://github.com/geoffreylokol22/Med-Insu-Fraud-Detection/blob/master/Analysis.ipynb" target="_blank">View Project</a>
+                <button class="read-more-button" data-article="ml_article.html">Read More</button>
             </div>
-            
-            <div class="project-card">
+
+            <div class="project-card" data-article="web_scraping_article.html">
                 <img src="api.jpg" alt="Project 3">
                 <h3>Web Scraping</h3>
                 <p>Automated data collection from websites using Python (BeautifulSoup, Scrapy). Extracted, cleaned, and structured data for analysis and reporting.</p>
                 <a href="https://github.com/geoffreylokol22" target="_blank">View Project</a>
+                <button class="read-more-button" data-article="web_scraping_article.html">Read More</button>
             </div>
 
         </div>
+
+        <div id="article-container">
+            <button id="close-article">Close</button>
+            <div id="article-content"></div>
+        </div>
     </section>
+
+
 
 <!--     CONTACT FORM CONTAINER    -->
     <section id="contact">

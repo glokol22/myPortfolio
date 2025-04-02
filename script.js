@@ -3,15 +3,12 @@ const canvas = document.createElement('canvas');
 canvasContainer.appendChild(canvas);
 const ctx = canvas.getContext('2d');
 
+let points = [];
+
 function resizeCanvas() {
-    const containerStyles = window.getComputedStyle(canvasContainer);
-    const width = canvasContainer.clientWidth;  // Get width from container
-    const height = canvasContainer.clientHeight; // Get height from container
-
-    canvas.width = width;  // Sync width with container
-    canvas.height = height; // Sync height with container
-
-    generatePoints(width, height);
+    canvas.width = canvasContainer.clientWidth;
+    canvas.height = canvasContainer.clientHeight;
+    generatePoints(canvas.width, canvas.height);
 }
 
 function generatePoints(width, height) {
@@ -66,6 +63,11 @@ function draw() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 draw();
+
+
+
+
+
 
 // Contact Form Submission
 const contactForm = document.getElementById('contact-form');
@@ -133,3 +135,19 @@ const textContainer = document.getElementById("scrolling-text");
 // Join skills with the diamond icon separator and duplicate for seamless looping
 const textContent = skills.join(" 🔶 ");
 textContainer.innerHTML = `<span>${textContent} 🔶 ${textContent}</span>`;
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.read-more-button');
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const articleUrl = this.getAttribute('data-article');
+            // Open the article in a new tab
+            window.open(articleUrl, '_blank');
+        });
+    });
+});
