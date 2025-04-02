@@ -6,20 +6,26 @@ body {
     padding-right: 20px;
     overflow-x: hidden;
     background-color:#e8f8f5;
+    font-family: 'Nunito', sans-serif;
+
 }
 
-section {
-    background-color: #e8daef; /* Set your desired background color */
-    padding: 40px 20px;
-    margin: 20px 0; /* Optional: Adds margin between sections */
-    border-radius: 8px; /* Optional: Adds rounded corners to sections */
+#about, #projects, #contact {
+    padding: 10px 80px;
+    background-color: #e8daef;
+    margin: 20px 0;
+    border-radius: 8px;
+    position: relative;
+    padding-top: 80px; 
+    padding-bottom: 30px; 
 }
+
 
 
  /* Header Styles */
  #header-canvas-container {
     position: fixed;
-    top: -20px;
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -83,7 +89,7 @@ nav {
 }
 
 .navlinks a {
-    color: #f46c28;
+    color: #17202a;
     text-decoration: none;
     font-size: 12px;
     position: relative;
@@ -92,9 +98,9 @@ nav {
 
 /* Hover Effects */
 .navlinks a:hover {
-    color: #fff;
+    color: #000080;
     text-decoration: underline;
-    transform: scale(1.1);
+    font-weight: bold; /* Make the text bold on hover */
 }
 
 /* Mobile View: Show Menu Icon & Hide Nav Links */
@@ -142,6 +148,7 @@ nav {
     text-align: center;
     color: white;
     margin-top: 100px;
+
 }
 
 /* About Container */
@@ -265,19 +272,6 @@ nav {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .scrolling-container {
     position: relative;
     overflow: hidden;
@@ -307,7 +301,6 @@ nav {
 
 /* --- Projects Section --- */
 #projects {
-    padding: 93px 20px;
     margin-bottom: 0px;
     position: relative;
     z-index: 1;
@@ -407,6 +400,7 @@ nav {
     margin-top: 20px;
     width: 100%;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif; /* Add font-family here */
 }
 
 #article-container button {
@@ -417,6 +411,7 @@ nav {
 /* --- Individual Article Styles (within templates) --- */
 .article-content {
     margin-top: 20px;
+    font-family: 'Nunito', sans-serif; /* Add font-family here */
 }
 
 .article-content img {
@@ -462,117 +457,6 @@ nav {
 .article-content a:hover {
     color: #0056b3;
 }
-
-
-
-/*
-#projects {
-    padding: 93px 20px;
-    background-color: snow;
-    margin-bottom: 0px;
-    position: relative;
-    z-index: 1;
-}
-
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    row-gap: 60px;
-    justify-content: center;
-}
-
-.project-card {
-    width: 200px;
-    background: oldlace;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 10px 20px;
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 5px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.project-card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    color: white;
-    background: orangered;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.project-card h3 {
-    margin: 10px 0;
-    font-size: 12px;
-}
-
-.project-card p {
-    color: #555;
-    font-size: 12px;
-}
-*/
-/*
-#contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-}
-
-
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 250px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: floralwhite;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-}
-
-
-#contact-form input,
-#contact-form textarea {
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
-}
-
-#contact-form label {
-    margin-bottom: 6px;
-    font-size: 12px;
-}
-
-
-#name:required,
-#email:required,
-#message:required {
-    border: 2px dotted orangered;
-    background: floralwhite;
-    box-shadow: 0 0 10px rgba(255, 69, 0, 0.2);
-    margin-bottom: -10px;
-    padding: 8px;
-    font-size: 12px;
-}
-
-#email:invalid {
-    border: 2px dotted orangered;
-    background: floralwhite;
-}
-*/
 
 #contact {
     display: flex;
@@ -636,6 +520,9 @@ footer {
     padding: 1rem 0;
     margin-top: auto;
     width: 100%;
+    background-color: #ffffff; /* Light background color */
+    border-radius: 10px; /* Rounded corners for soft edges */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
 }
 
 .footer-content {
