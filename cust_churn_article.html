@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction with Machine Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Sono:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Customer Churn Prediction with Machine Learning</h1>
+    </header>
+
+    <section class="article-content">
+        <img src="churn.jpg" alt="Customer Churn Analysis">
+
+        <h2>Predicting Customer Churn in the Telecommunications Industry</h2>
+
+        <p>
+            This project focused on analyzing customer data to predict churn in the telecommunications industry.
+            The goal was to identify the key factors that contribute to customer attrition and develop machine
+            learning models to predict which customers are most likely to churn. This analysis enables proactive
+            customer retention strategies, ultimately reducing customer loss. The data source for this analysis
+            is Kaggle.
+        </p>
+
+        <h3>Project Overview</h3>
+
+        <p>
+            The analysis involved several key steps, including data cleaning and preprocessing, exploratory data
+            analysis (EDA), feature engineering, model selection, training, and evaluation. I utilized Python and
+            various libraries such as Pandas, NumPy, Seaborn, Matplotlib, and Scikit-learn, XGBoost to perform
+            these tasks. The primary objective was to build accurate and reliable predictive models and derive
+            insights from the data to inform business decisions.
+        </p>
+
+        <h3>Technologies Used</h3>
+
+        <ul>
+            <li>Python</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Seaborn</li>
+            <li>Matplotlib</li>
+            <li>Scikit-learn</li>
+            <li>XGBoost</li>
+
+        </ul>
+
+        <h3>Implementation Details</h3>
+
+        <h4>Data Loading and Preprocessing</h4>
+
+        <p>
+            The customer churn data was loaded into a Pandas DataFrame. The initial steps involved checking for
+            missing values and handling them appropriately.
+        </p>
+        <p>
+            Specifically, missing values were observed in columns like 'Offer', 'Multiple Lines', 'Internet Type',
+            'Online Security', 'Online Backup', 'Device Protection Plan', 'Premium Tech Support', 'Streaming TV',
+            'Streaming Movies', 'Streaming Music', 'Unlimited Data', 'Churn Category', 'Churn Reason', 'Avg
+            Monthly Long Distance Charges', and 'Avg Monthly GB Download'.
+        </p>
+        <p>
+            Rows with 'Internet Service' set to 'No' had missing values in columns related to internet
+            services; these were replaced with 'No' or 0 where applicable.
+        </p>
+        <p>
+            After handling missing data, the data was prepared for analysis and modeling by encoding categorical
+            variables. Binary encoding was applied to columns with two unique values (e.g., 'Yes'/'No',
+            'Male'/'Female'), and one-hot encoding was used for nominal categorical variables. Ordinal
+            encoding was used for 'Customer Status'.
+        </p>
+
+        <h4>Exploratory Data Analysis (EDA)</h4>
+
+        <p>
+            Exploratory Data Analysis was conducted to understand the characteristics of the data. This included
+            visualizing the distribution of categorical and numerical variables.
+        </p>
+        <p>
+            For categorical variables, count plots were used to show the distribution of 'Contract', 'Internet
+            Service', 'Online Security', 'Payment Method', and 'Customer Status'.
+        </p>
+        <p>
+            For numerical variables, box plots were used to identify outliers in features such as 'Age', 'Tenure in
+            Months', 'Monthly Charge' , 'Total Charges' etc.
+        </p>
+        <p>
+            A correlation matrix was generated to explore the relationships between numerical features. Strong correlations were observed between 'Total Revenue' and 'Total Charges' (0.97)
+            , 'Total Revenue' and 'Total Long Distance Charges' (0.78), and 'Total Charges' and 'Tenure' (0.85).
+        </p>
+
+        <h4>Model Selection and Training</h4>
+
+        <p>
+            Several machine learning models were trained to predict customer churn. The dataset was split into
+            training (80%) and testing (20%) sets, ensuring stratification to maintain class balance.
+            Numeric features were standardized using StandardScaler. The models used include:
+        </p>
+
+        <ul>
+            <li>Logistic Regression</li>
+            <li>Random Forest</li>
+            <li>XGBoost</li>
+            <li>Naive Bayes</li>
+        </ul>
+
+        <p>
+            Each model was trained on the training data, and its performance was evaluated on the test data.
+        </p>
+
+        <h4>Results and Outcomes</h4>
+
+        <p>
+            The performance of each model was evaluated using accuracy scores and classification reports.
+            Confusion matrices were also plotted to visualize the classification results.
+        </p>
+
+        <p>
+            The XGBoost model achieved the highest accuracy (85%), followed by Random Forest (84%), Logistic
+            Regression (81%), and Naive Bayes (68%).
+        </p>
+
+        <p>
+            Feature importance analysis using Random Forest and XGBoost models revealed that 'Contract Type'
+            and 'Tenure in Months' were the most significant predictors of churn.
+        </p>
+
+        <p>
+            The analysis provides valuable insights into the factors influencing customer churn. The machine
+            learning models developed can be used to predict churn and enable proactive retention efforts.
+        </p>
+
+        <a href="index.html">Back to Portfolio</a>
+    </section>
+</body>
+
+</html>

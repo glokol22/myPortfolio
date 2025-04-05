@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Fraud Detection with Machine Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Sono:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Medical Fraud Detection with Machine Learning</h1>
+    </header>
+
+    <section class="article-content">
+        <img src="ml_img.jpg" alt="Medical Fraud Detection">
+
+        <h2>Introduction</h2>
+        <p>
+            This project focused on developing a machine learning model to detect potential fraud within the healthcare
+            industry. Medical fraud is a serious issue that inflates costs and compromises the quality of care. My goal
+            was to create a tool that could accurately identify fraudulent claims and activities.
+        </p>
+
+        <h3>Project Overview</h3>
+        <p>
+            The project involved a comprehensive analysis of healthcare data, including provider information, beneficiary
+            details, and claim records (both inpatient and outpatient). I used Python and various machine learning
+            libraries to preprocess the data, engineer relevant features, train classification models, and evaluate their
+            performance. The key challenges included handling imbalanced data and the complexity of healthcare billing
+            patterns.
+        </p>
+
+        <h3>Technologies Used</h3>
+        <ul>
+            <li>Python</li>
+            <li>pandas</li>
+            <li>numpy</li>
+            <li>scikit-learn</li>
+            <li>matplotlib</li>
+            <li>seaborn</li>
+            <li>xgboost</li>
+            <li>lightgbm</li>
+        </ul>
+
+        <h3>Implementation Details</h3>
+        <h4>Data Loading and Preprocessing</h4>
+        <p>
+            The data was loaded from Excel files into pandas DataFrames. Missing values were addressed using appropriate
+            imputation techniques, and columns with excessive missing data were removed. Categorical variables were
+            encoded to make them suitable for machine learning algorithms.
+        </p>
+
+        <h4>Feature Engineering</h4>
+        <p>
+            I engineered new features to enhance the model's ability to detect fraud. These included metrics like claim
+            duration, length of stay, beneficiary claim frequency, and indicators of past provider fraud.
+        </p>
+
+        <h4>Model Selection and Training</h4>
+        <p>
+            I experimented with several classification models, including Logistic Regression, Random Forest, XGBoost, and
+            LightGBM. The models were trained and validated using techniques like train-test split and cross-validation.
+        </p>
+
+        <h4>Addressing Class Imbalance</h4>
+        <p>
+            Given the imbalanced nature of the dataset (fewer fraudulent cases than non-fraudulent), I employed techniques
+            to mitigate bias and ensure the model effectively identified fraudulent instances.
+        </p>
+
+        <h3>Results and Outcomes</h3>
+        <p>
+            The LightGBM model demonstrated strong performance in detecting medical fraud. On the validation set, the
+            model achieved an overall accuracy of 84%. The ROC AUC score was 0.8038, indicating good discriminatory power.
+            The specificity (True Negative Rate) was 0.94, and the sensitivity (Recall / True Positive Rate) was 0.67.
+        </p>
+        <p>
+            These results suggest that machine learning can be a valuable tool for identifying potential fraud, leading to
+            cost savings and improved efficiency in healthcare administration.
+        </p>
+
+        <a href="index.html">Back to Portfolio</a>
+    </section>
+    
+</body>
+
+</html>

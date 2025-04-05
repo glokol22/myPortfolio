@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Sono:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Loan Approval Prediction</h1>
+    </header>
+    <section class="article-content">
+        <img src="credit_approval.jpg" alt="Loan Approval Analysis">
+        <h2>Predicting Loan Status with Machine Learning</h2>
+        <p>
+            This project focused on leveraging machine learning to accurately predict loan approval status, a crucial task
+            for financial institutions to manage risk and optimize operations. The analysis utilized two datasets: a
+            training set ("train_data.csv") with known loan statuses and a test set ("test_data.csv") for which the loan
+            status was to be predicted.
+        </p>
+
+        <h3>Project Overview</h3>
+        <p>
+            The project began with loading the datasets using the Pandas library in Python. Initial exploration involved
+            examining the data structure and checking for duplicate entries. No duplicate rows were found in either dataset.
+            A thorough assessment of missing values was conducted to understand data completeness. Categorical features
+            were examined to determine the number of unique values and their distribution.
+        </p>
+        <p>
+            To prepare the data for machine learning, several preprocessing steps were taken. Missing values were removed
+            by dropping rows containing them. Categorical variables were encoded using a combination
+            of label encoding for binary variables and one-hot encoding for multi-category variables. Finally,
+            numerical features were scaled using the StandardScaler to ensure all features contribute equally to the models.
+        </p>
+
+        <h3>Feature Analysis and Visualization</h3>
+        <p>
+            Visualizations were employed to gain insights into the data. Count plots illustrated the relationship between
+            categorical variables and loan status, providing a clear view of how different categories influence approval
+            rates. Box plots were used to identify outliers in numerical features, which could
+            potentially skew model performance. A correlation matrix heatmap revealed the
+            relationships between numerical variables, helping to understand potential multicollinearity. 
+        </p>
+
+        <h3>Model Selection and Evaluation</h3>
+        <p>
+            A variety of machine learning models were evaluated for their ability to predict loan status. These included: 
+        </p>
+        <ul>
+            <li>Logistic Regression</li>
+            <li>Decision Tree</li>
+            <li>Random Forest</li>
+            <li>Extra Trees</li>
+            <li>Support Vector Machine (SVM)</li>
+            <li>K-Nearest Neighbors (KNN)</li>
+            <li>Gaussian Naive Bayes</li>
+            <li>AdaBoost</li>
+            <li>Gradient Boosting Classifier</li>
+            <li>Dense Neural Network (MLPClassifier)</li>
+        </ul>
+        <p>
+            Each model's hyperparameters were tuned using GridSearchCV to optimize performance. The models were trained on a
+            portion of the training data and validated on a separate validation set.
+            Accuracy and classification reports were used to assess the performance of each model. 
+        </p>
+
+        <h3>Results and Discussion</h3>
+        <p>
+            The analysis revealed the following validation accuracies for each model: 
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Validation Accuracy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Logistic Regression (LR)</td>
+                    <td>0.8229</td>
+                </tr>
+                <tr>
+                    <td>Decision Tree (DT)</td>
+                    <td>0.8229</td>
+                </tr>
+                <tr>
+                    <td>Random Forest (RF)</td>
+                    <td>0.8125</td>
+                </tr>
+                <tr>
+                    <td>Extra Trees (ET)</td>
+                    <td>0.8125</td>
+                </tr>
+                <tr>
+                    <td>Support Vector Machine (SVM)</td>
+                    <td>0.8229</td>
+                </tr>
+                <tr>
+                    <td>K-Nearest Neighbors (KNN)</td>
+                    <td>0.8125</td>
+                </tr>
+                <tr>
+                    <td>Gaussian Naive Bayes (GNB)</td>
+                    <td>0.2917</td>
+                </tr>
+                <tr>
+                    <td>AdaBoost (AdB)</td>
+                    <td>0.8125</td>
+                </tr>
+                <tr>
+                    <td>Gradient Boosting Classifier (GBC)</td>
+                    <td>0.8021</td>
+                </tr>
+                <tr>
+                    <td>Dense Neural Network (DNN)</td>
+                    <td>0.5625</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Logistic Regression, Decision Tree, and Support Vector Machine achieved the highest validation accuracy
+            (approximately 82%). Gaussian Naive Bayes and the Dense Neural Network showed relatively lower performance
+            compared to the other models. 
+        </p>
+
+        <h3>Choice of Model</h3>
+        <p>
+            Given their comparable performance and relative simplicity, Logistic Regression, Decision Tree, or SVM would be
+            suitable choices for this loan approval prediction task. While all three performed similarly, the choice may
+            depend on other factors: 
+        </p>
+        <ul>
+            <li><b>Logistic Regression:</b> Offers interpretability, as coefficients can be examined to understand feature
+                importance.</li>
+            <li><b>Decision Tree:</b> Provides a clear decision-making process but can be prone to overfitting if not pruned
+                properly.</li>
+            <li><b>SVM:</b> Effective in high-dimensional spaces but can be less interpretable than Logistic Regression or
+                Decision Trees.</li>
+        </ul>
+        <p>
+            In this analysis, the models showed very similar results.
+        </p>
+
+        <h3>Conclusion</h3>
+        <p>
+            This analysis demonstrates the effectiveness of machine learning in predicting loan approval status. The
+            insights gained from data exploration and feature analysis, combined with rigorous model evaluation, provide a
+            solid foundation for developing a loan approval prediction system. Further improvements could involve exploring
+            more advanced feature engineering techniques or gathering additional data to enhance model accuracy and
+            robustness.
+        </p>
+        <a href="index.html">Back to Portfolio</a>
+    </section>
+</body>
+
+</html>
