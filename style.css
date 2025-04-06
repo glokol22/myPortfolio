@@ -1,22 +1,28 @@
+html {
+    scroll-padding-top: 102px;
+    scroll-behavior: smooth;
+}
+
 /* Ensure the body has a max-width and is centered */
 body {
     margin: 0 auto;
     max-width: 1000px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 90px;
     overflow-x: hidden;
     background-color:#e8f8f5;
     font-family: 'Nunito', sans-serif;
 
 }
 
+
 #about, #projects, #contact {
-    padding: 10px 80px;
+    padding: 10px 20px;
     background-color: #e8daef;
-    margin: 20px 0;
+    margin: 15px 0;
     border-radius: 8px;
     position: relative;
-    padding-top: 80px; 
     padding-bottom: 30px; 
 }
 
@@ -25,12 +31,12 @@ body {
  /* Header Styles */
  #header-canvas-container {
     position: fixed;
-    top: -10px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     max-width: 1000px;
-    height: 80px;
+    height: 90px;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -147,8 +153,6 @@ nav {
     justify-content: center;
     text-align: center;
     color: white;
-    margin-top: 100px;
-
 }
 
 /* About Container */
