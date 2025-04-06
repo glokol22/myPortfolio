@@ -3,7 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Ensure the body has a max-width and is centered */
+
 body {
     margin: 0 auto;
     max-width: 1000px;
@@ -28,8 +28,8 @@ body {
 
 
 
- /* Header Styles */
- #header-canvas-container {
+
+#header-canvas-container {
     position: fixed;
     top: 0;
     left: 50%;
@@ -44,7 +44,7 @@ body {
     padding: 0 20px;
     box-sizing: border-box;
     background-color: #fff;
-    overflow: hidden;
+    overflow: visible;
 }
 
 
@@ -55,9 +55,8 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Moves canvas behind other elements */
+    z-index: -1;
 }
-
 
 .logo-image {
     width: 110px;
@@ -67,23 +66,21 @@ canvas {
 }
 
 
-
-/* Navigation */
 nav {
     display: flex;
     align-items: center;
     gap: 3rem;
 }
 
-/* Menu Icon (Hidden by Default) */
+
 .menu_icon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
-/* Navigation links */
+
 .navlinks {
     list-style-type: none;
     display: flex;
@@ -102,46 +99,79 @@ nav {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover Effects */
+
 .navlinks a:hover {
     color: #000080;
     text-decoration: underline;
-    font-weight: bold; /* Make the text bold on hover */
+    font-weight: bold; 
 }
 
-/* Mobile View: Show Menu Icon & Hide Nav Links */
+
+
+
+
 @media (max-width: 768px) {
     .menu_icon {
-        display: block; /* Show menu icon on small screens */
+      display: block;
+      z-index: 1002;
+      cursor: pointer;
+      font-size: 24px;
     }
-
+  
     .navlinks {
-        display: none; /* Hide nav links by default in mobile */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
         flex-direction: column;
-        position: absolute;
-        top: 80px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        text-align: center;
-    }
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 1001;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+      }
 
+
+      .navlinks.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      
     .navlinks li {
-        display: block;
-        margin: 10px 0;
+      margin: 1rem 0;
     }
-
+  
     .navlinks a {
-        color: #fff;
-        font-size: 16px;
+      font-size: 20px;
+      color: #17202a;
+      text-decoration: none;
+      font-weight: bold;
     }
+  
+    .navlinks a:hover {
+      color: #000080;
+      text-decoration: underline;
+    }
+  }
+  
 
-    /* When menu is open, show nav */
-    .nav-active {
-        display: flex;
-    }
-}
+  
+
+
+
+
+
+
+
+
+
 
 
 
@@ -323,13 +353,12 @@ nav {
 }
 
 .project-card {
-    width: 250px;
-    background-color: oldlace;
+    width: 400px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 10px 20px;
+    margin: 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -340,45 +369,58 @@ nav {
 .project-card img {
     width: 100%;
     border-radius: 5px;
-    height: 100px;
+    height: 120px;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .project-card h3 {
-    margin: 10px 0;
+    margin: 2px 0;
     font-size: 1.2em;
 }
 
 .project-card p {
-    color: #555;
+    color: #ffffff;
     font-size: 0.9em;
-    margin-bottom: 10px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
     overflow: hidden;
 }
 
 .project-card:hover p {
-    -webkit-line-clamp: unset;
     overflow: visible;
     white-space: normal;
     word-wrap: break-word;
 }
 
 .project-card:hover {
-    height: auto !important;
+    height: auto;
     z-index: 1;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+
+
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(45deg, #f06, #4c8bf5);
+    }
+    100% {
+        background: linear-gradient(45deg, #4c8bf5, #f06);
+    }
+}
+
+.project-card {
+    animation: gradientShift 5s ease-in-out infinite;
+    background-size: 400% 400%;
+}
+
+
 .project-card a, .project-card .read-more-button {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 8px 12px;
     color: white;
-    background: orangered;
+    background: rgb(255, 155, 119);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -388,18 +430,20 @@ nav {
 }
 
 .project-card a:hover, .project-card .read-more-button:hover {
-    background: #b03a0b;
+    background: #ffece4;
+    color: #555;
 }
 
 .project-card .read-more-button {
     background: #4CAF50;
+    font-family: 'Nunito', sans-serif;
 }
 
 
 section.article-content {
     max-width: 900px;
     margin: 2em auto;
-    padding: 60px; /* Increased padding */
+    padding: 60px; 
     background: #f8f8f0;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
@@ -518,7 +562,7 @@ section.article-content {
 /* Media Query for Responsiveness  */
 @media (max-width: 768px) {
     section.article-content {
-        padding: 20px; /* Reduced padding for smaller screens */
+        padding: 20px; 
         margin: 1.5em auto;
     }
 
@@ -538,36 +582,16 @@ section.article-content {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #contact {
     display: flex;
     flex-direction: column;
     padding: 40px;
 }
 
-#contact > h2 { /* Select the h2 that is a direct child of #contact */
-    align-self: flex-start;
+#contact h2 {
+    font-size: 1.5em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 #contact-form {
@@ -612,8 +636,20 @@ section.article-content {
 }
 
 
+#contact-form button {
+    background-color: rgb(255, 120, 71);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
 
-
+#contact-form button:hover {
+    background-color: #fea37f;
+}
 
 
 footer {
@@ -621,31 +657,27 @@ footer {
     padding: 1rem 0;
     margin-top: auto;
     width: 100%;
-    background-color: #ffffff; /* Light background color */
-    border-radius: 10px; /* Rounded corners for soft edges */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
 }
 
 .social-icons {
     display: flex;
-    gap: 60px;
+    gap: 40px;
 }
 
 .social-icons a {
     display: block;
     background-color: white;
-    padding: 2px;
     border-radius: 50%;
     transition: transform 0.2s;
-    width: 20px;
-    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -663,4 +695,5 @@ footer {
 .footer-content p {
     font-size: 0.8rem;
     text-align: center;
+    margin-bottom: auto;
 }

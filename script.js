@@ -66,9 +66,6 @@ draw();
 
 
 
-
-
-
 // Contact Form Submission
 const contactForm = document.getElementById('contact-form');
 
@@ -100,15 +97,6 @@ contactForm.addEventListener('submit', function(event) {
     });
 });
 
-/** creating a button to toggle the navbar */
-var menu_icon = document.querySelector('.menu_icon');
-var nav = document.querySelector('.navlinks');
-var links = document.querySelector('.navlinks li');
-
-menu_icon.addEventListener('click', function(){
-    this.classList.toggle('click');
-    nav.classList.toggle('open');
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     var typed = new Typed('.input', {
@@ -120,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
         smartBackspace: true 
     });
 });
-
 
 
 const skills = [
@@ -137,9 +124,6 @@ const textContent = skills.join(" 🔶 ");
 textContainer.innerHTML = `<span>${textContent} 🔶 ${textContent}</span>`;
 
 
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const readMoreButtons = document.querySelectorAll('.read-more-button');
 
@@ -151,4 +135,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector(".menu_icon");
+    const navLinks = document.querySelector(".navlinks");
+    const navLinkItems = document.querySelectorAll(".navlinks a");
+
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    navLinkItems.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  });
 
