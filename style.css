@@ -28,7 +28,6 @@ body {
 
 
 
-
 #header-canvas-container {
     position: fixed;
     top: 0;
@@ -334,8 +333,7 @@ nav {
     padding-right: 3rem; 
 }
 
-
-/* --- Projects Section ---*/
+/* --- Projects Section --- */
 #projects {
     margin-bottom: 0px;
     position: relative;
@@ -347,25 +345,30 @@ nav {
 
 .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    row-gap: 60px;
+    flex-wrap: wrap; 
+    gap: 20px;
+    row-gap: 20px; 
     justify-content: center;
     width: 100%;
+    max-width: 900px; 
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
 .project-card {
+    width: calc(50% - 30px); 
+    max-width: 400px; 
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
     position: relative;
-} 
+    box-sizing: border-box; 
+}
 
 .project-card img {
     width: 100%;
@@ -396,10 +399,8 @@ nav {
 .project-card:hover {
     height: auto;
     z-index: 1;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-
 
 @keyframes gradientShift {
     0% {
@@ -414,7 +415,6 @@ nav {
     animation: gradientShift 5s ease-in-out infinite;
     background-size: 400% 400%;
 }
-
 
 .project-card a, .project-card .read-more-button {
     display: inline-block;
@@ -440,17 +440,13 @@ nav {
     font-family: 'Nunito', sans-serif;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Adjust margins for mobile */
+    }
+}
 
 
 section.article-content {
