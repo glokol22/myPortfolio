@@ -101,7 +101,7 @@ nav {
 
 
 .navlinks a:hover {
-    color: #000080;
+    color: #3744ff;
     text-decoration: underline;
     font-weight: bold; 
 }
@@ -170,7 +170,7 @@ nav {
 
     .navlinks a:hover {
         background: linear-gradient(to right, #f0f0f0, #ff30d284);
-        color: #000080;
+        color: #ffffff;
         text-decoration: none;
     }
 }
