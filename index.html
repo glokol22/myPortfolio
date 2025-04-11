@@ -12,10 +12,11 @@
 </head>
 <body>
     
+    <!-- HEADER CONTAINER -->
     <header id="header-canvas-container">
-        <img src="logo.png" alt="Your Logo" class="logo-image">
+        <img src="images/logo.png" alt="Your Logo" class="logo-image">
         <nav>
-            <img src="menu-button.png" alt="Menu Button" class="menu_icon">
+            <img src="images/menu-button.png" alt="Menu Button" class="menu_icon">
             <ul class="navlinks">
                 <li><a href="#about">Home</a></li>
                 <li><a href="#projects">Portfolio</a></li>
@@ -24,23 +25,23 @@
         </nav>
     </header>
 
-
-<!--     BODY CONTAINER  -->
-    <section id = 'about'>
-        <div class = "about-container">
+    <!-- ABOUT CONTAINER -->
+    <section id='about'>
+        <div class="about-container">
             <h1>Geoffrey Lokol</h1>
             <h5>Hi, I'm <span class="input">Data Analyst</span></h5>
-            <p>  A data analyst with a strong background in data extraction, 
+            <p>
+                A data analyst with a strong background in data extraction, 
                 cleaning, and visualization. Skilled in Python, SQL, and data automation, with a keen interest 
                 in uncovering insights through analytics. Constantly exploring new technologies to drive data-driven decision-making.
             </p>
             <a href="Resume" class="btn">Resume</a>
         </div>
         <div class="image-row">
-            <img src="sql.png" alt="python">
-            <img src="python.png" alt="database">
-            <img src="r.png" alt="python">
-            <img src="powerBI.png" alt="python">
+            <img src="images/sql.png" alt="SQL">
+            <img src="images/python.png" alt="Python">
+            <img src="images/r.png" alt="R">
+            <img src="images/powerBI.png" alt="Power BI">
         </div>
 
         <div class="scrolling-container">
@@ -52,86 +53,85 @@
         <h2>My Portfolio</h2>
         <div class="projects-container">
 
-            <div class="project-card" data-article="web_portfolio_article.html">
-                <img src="web_dev.jpg" alt="Project 1">
+            <div class="project-card" data-article="articles/web_portfolio_article.html">
+                <img src="images/web_dev.jpg" alt="Website Portfolio">
                 <h3>Website Portfolio</h3>
                 <p>Created an interactive website portfolio using JavaScript, HTML, and CSS. Implemented responsive design for all devices. Showcased diverse projects and skills.</p>
                 <a href="https://geoffreylokol22.github.io/myPortfolio/" target="_blank" rel="noopener">View Project</a>
-                <button class="read-more-button" data-article="web_portfolio_article.html">Read More</button>
+                <button class="read-more-button" data-article="articles/web_portfolio_article.html">Read More</button>
             </div>
             
-            <div class="project-card" data-article="cust_churn_article.html">
-                <img src="churn.jpg" alt="Project 2">
+            <div class="project-card" data-article="articles/cust_churn_article.html">
+                <img src="images/churn.jpg" alt="Customer Churn">
                 <h3>Telco Customer Churn</h3>
                 <p>Developed machine learning models in Python to predict customer churn. Utilized Scikit-learn, XGBoost, and Matplotlib for preprocessing, modeling, and data visualization.</p>
-                <a href="https://github.com/geoffreylokol22/Customer_Churn_Prediction/blob/main/Analysis.ipynb" target="_black">View Project</a>
-                <button class="read-more-button" data-article="cust_churn_article.html">Read More</button>
+                <a href="https://github.com/geoffreylokol22/Customer_Churn_Prediction/blob/main/Analysis.ipynb" target="_blank" rel="noopener">View Project</a>
+                <button class="read-more-button" data-article="articles/cust_churn_article.html">Read More</button>
             </div>
             
-            <div class="project-card" data-article="medical_fraud_article.html">
-                <img src="ml_img.jpg" alt="Project 3">
+            <div class="project-card" data-article="articles/medical_fraud_article.html">
+                <img src="images/ml_img.jpg" alt="Fraud Detection">
                 <h3>Machine Learning for Fraud Detection</h3>
                 <p>Utilized Scikit-learn in Python to develop a machine learning model for medical insurance fraud detection, demonstrating expertise in feature extraction and model evaluation.</p>
                 <a href="https://github.com/geoffreylokol22/Med-Insu-Fraud-Detection/blob/master/Analysis.ipynb" target="_blank" rel="noopener">View Project</a>
-                <button class="read-more-button" data-article="medical_fraud_article.html">Read More</button>
+                <button class="read-more-button" data-article="articles/medical_fraud_article.html">Read More</button>
             </div>
             
-            <div class="project-card" data-article="credit_approval_article.html">
-                <img src="credit_approval.jpg" alt="Project 4">
+            <div class="project-card" data-article="articles/credit_approval_article.html">
+                <img src="images/credit_approval.jpg" alt="Credit Approval">
                 <h3>Predictive Credit Approval Analysis</h3>
                 <p>Analyzed loan application data to predict loan approval status. Built machine learning models to identify factors influencing decisions and estimate the likelihood of approval.</p>
                 <a href="https://github.com/geoffreylokol22/Credit_Approval_Prediction/blob/main/Analysis.ipynb" target="_blank" rel="noopener">View Project</a>
-                <button class="read-more-button" data-article="credit_approval_article.html">Read More</button>
+                <button class="read-more-button" data-article="articles/credit_approval_article.html">Read More</button>
             </div>
             
-            <div class="project-card" data-article="cust_seg_article.html">
-                <img src="customer_seg.jpg" alt="Customer Segmentation">
+            <div class="project-card" data-article="articles/cust_seg_article.html">
+                <img src="images/customer_seg.jpg" alt="Customer Segmentation">
                 <h3>Customer Segmentation with SQL</h3>
                 <p>Used SQL to analyze a 51,000-record customer dataset. This included normalizing data and employing various SQL operations to generate actionable customer insights.</p>   
                 <a href="[Your GitHub Repo Link]" target="_blank">View Project</a>
-                <button class="read-more-button" data-article="cust_seg_article.html">Read More</button>
+                <button class="read-more-button" data-article="articles/cust_seg_article.html">Read More</button>
             </div>
 
         </div>
     </section>
 
-
-
-<!--     CONTACT FORM CONTAINER    -->
+    <!-- CONTACT FORM CONTAINER -->
     <section id="contact">
-       <h2>Contact Form</h2>
-       <form id="contact-form">
-           <label for="name">Name:</label><br>
-           <input type="text" id="name" name="name" required><br><br>
+        <h2>Contact Form</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
 
-           <label for="email">Email:</label><br>
-           <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
 
-           <label for="message">Message:</label><br>
-           <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-           <button type="submit">Send</button>
-       </form>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
-<!--     FOOTER CONTAINER    -->
+    <!-- FOOTER CONTAINER -->
     <footer>
-       <div class="footer-content">
-           <div class="social-icons">
-               <a href="https://github.com/geoffreylokol22" target="_blank" rel="noopener noreferrer">
-                   <img src="github_icon.png" alt="GitHub">
-               </a>
-               <a href="mailto:geoffreyesekon@gmail.com">
-                   <img src="gmail_icon.png" alt="Gmail">
-               </a>
-               <a href="https://www.linkedin.com/in/glokol/" target="_blank" rel="noopener noreferrer">
-                   <img src="linkedinlogo_icon.png" alt="LinkedIn">
-               </a>
-           </div>
-           <p>&copy; 2025 Geoffrey Lokol</p>
-       </div>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://github.com/geoffreylokol22" target="_blank" rel="noopener noreferrer">
+                    <img src="images/github_icon.png" alt="GitHub">
+                </a>
+                <a href="mailto:geoffreyesekon@gmail.com">
+                    <img src="images/gmail_icon.png" alt="Gmail">
+                </a>
+                <a href="https://www.linkedin.com/in/glokol/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedinlogo_icon.png" alt="LinkedIn">
+                </a>
+            </div>
+            <p>&copy; 2025 Geoffrey Lokol</p>
+        </div>
     </footer>
 
    <script src="script.js"></script>
+
 </body>
 </html>
