@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Demographics and Employment Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Sono:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Customer Demographics and Employment Analysis</h1>
+    </header>
+
+    <section class="article-content">
+        <img src="customer_seg.jpg" alt="Customer Demographics Analysis">
+
+        <h2>Unlocking Customer Insights: A Detailed SQL-Driven Analysis</h2>
+
+        <p>
+            This project focused on analyzing customer data to derive key insights into customer demographics,
+            geographic distribution, and employment characteristics. The analysis utilized SQL queries to extract
+            and process data from a dataset of 51,000 customer records. The findings provide a comprehensive view
+            of customer attributes, enabling more informed business strategies.
+        </p>
+
+        <h3>Project Overview</h3>
+
+        <p>
+            The analysis involved several key steps, including data normalization, table creation, and data querying.
+            SQL was employed to perform data selection, filtering, joining, and aggregation. The primary objective
+            was to extract meaningful information about customers and their attributes to support business
+            decision-making.
+        </p>
+
+        <h3>Technologies Used</h3>
+
+        <ul>
+            <li>SQL</li>
+            <li>SQLite</li>
+            <li>Pandas</li>
+        </ul>
+
+        <h3>Implementation Details</h3>
+
+        <h4>Data Loading and Normalization</h4>
+
+        <p>
+            The customer data was loaded and normalized into several tables, including customer data, location,
+            address, employment, and education. This normalization process facilitated efficient data querying
+            and analysis.
+        </p>
+
+        <p>
+            Key tables created include:
+        </p>
+
+        <ul>
+            <li><b>customer_data:</b> Containing customer details like first name, last name, gender, email, phone,
+                and IP address.</li>
+            <li><b>location:</b> Storing geographic information such as city, country, country code, latitude,
+                longitude, and time zone.</li>
+            <li><b>address:</b> Including address details like street number, street name, street suffix, and full street
+                address.</li>
+            <li><b>employment:</b> Containing employment information like company name, department, job title, and
+                LinkedIn skill.</li>
+            <li><b>education:</b> Storing educational details such as title, university, and language.</li>
+        </ul>
+
+        <h4>Data Querying</h4>
+
+        <p>
+            SQL queries were used to extract and analyze data from the normalized tables. These queries performed
+            various operations, including:
+        </p>
+
+        <ul>
+            <li>Selecting specific customer attributes (e.g., first name, last name, email).</li>
+            <li>Filtering customers based on criteria such as gender or location.</li>
+            <li>Joining tables to combine related data (e.g., customer data with location or employment data).</li>
+            <li>Aggregating data to provide summaries (e.g., counting customers in each city, calculating average
+                coordinates).</li>
+            <li>Ordering results for better readability and analysis.</li>
+            <li>Updating and deleting customer records.</li>
+            <li>Identifying distinct values for attributes like countries, cities, and job titles.</li>
+        </ul>
+
+        <h4>Key Findings</h4>
+
+        <p>
+            The analysis revealed several significant insights:
+        </p>
+
+        <ul>
+            <li><b>Customer Distribution:</b> The dataset includes a diverse range of customer information, from
+                personal details to geographic locations.</li>
+            <li><b>Geographic Insights:</b> Customers are distributed across numerous cities and countries, with
+                detailed location data including latitude, longitude, and time zones.</li>
+            <li><b>Employment Details:</b> The analysis identified various job titles and company information,
+                showing the distribution of customers across different professions and organizations.</li>
+            <li><b>Gender and Job Titles:</b> The distribution of customers by gender and job title was explored,
+                highlighting common job roles among different genders.</li>
+            <li><b>Email Domains:</b> Common email domains among customers were identified, providing potential
+                insights into customer affiliations.</li>
+            <li><b>Education:</b> The universities attended by customers were analyzed, revealing institutions with
+                higher customer representation.</li>
+            <li><b>Address Data:</b> Street address information was included, with checks for address completeness
+               .</li>
+            <li><b>Averages and Aggregations:</b> Average latitude and longitude were calculated for customer
+                locations, offering a geographical overview.</li>
+        </ul>
+
+        <h4>Specific Findings</h4>
+        <ul>
+            <li>The most frequent job title is "Analyst Programmer".</li>
+            <li>Customers use a variety of email domains.</li>
+            <li>Certain universities have a higher number of customers, indicating potential clusters.</li>
+            <li>The average latitude and longitude for customer locations were calculated.</li>
+            <li>Time zone distribution varies by country, with concentrations in areas like China and Indonesia.</li>
+
+        </ul>
+
+        <h4>Implications</h4>
+
+        <p>
+            These findings can be used to:
+        </p>
+
+        <ul>
+            <li><b>Target Marketing:</b> Tailor marketing campaigns based on customer demographics, job titles, and
+                geographic locations.</li>
+            <li><b>Enhance Services:</b> Improve services to better meet the needs of specific customer segments.</li>
+            <li><b>Inform Strategic Decisions:</b> Support strategic planning related to recruitment, expansion, and
+                customer engagement.</li>
+        </ul>
+
+        <h4>Conclusion</h4>
+
+        <p>
+            The SQL-driven analysis of customer data has provided valuable insights into customer demographics,
+            location, and employment. These insights can be leveraged to drive data-informed business decisions
+            and enhance customer-centric strategies.
+        </p>
+
+        <a href="index.html">Back to Portfolio</a>
+    </section>
+</body>
+
+</html>
