@@ -3,7 +3,6 @@ from flask_cors import CORS
 import mysql.connector
 from dotenv import load_dotenv
 import os
-import requests  # For verifying reCAPTCHA
 
 # Load environment variables
 load_dotenv()
@@ -11,9 +10,6 @@ load_dotenv()
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Enable CORS
-
-# Load reCAPTCHA secret key from .env
-RECAPTCHA_SECRET_KEY = os.getenv("RECAPTCHA_SECRET_KEY")
 
 # Database connection function
 def get_db_connection():
@@ -24,16 +20,6 @@ def get_db_connection():
         database=os.getenv("MYSQL_DATABASE")
     )
 
-# reCAPTCHA verification function
-def verify_recaptcha(token):
-    url = 'https://www.google.com/recaptcha/api/siteverify'
-    data = {
-        'secret': RECAPTCHA_SECRET_KEY,
-        'response': token
-    }
-    response = requests.post(url, data=data)
-    return response.json()
-
 # Form submission endpoint
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
@@ -41,12 +27,6 @@ def submit_form():
     name = data.get('name')
     email = data.get('email')
     message = data.get('message')
-    recaptcha_token = data.get('recaptchaToken')  # Received from frontend
-
-    # Verify reCAPTCHA
-    recaptcha_result = verify_recaptcha(recaptcha_token)
-    if not recaptcha_result.get('success') or recaptcha_result.get('score', 0) < 0.5:
-        return jsonify({"success": False, "message": "Failed reCAPTCHA verification"}), 400
 
     # Store message in database
     try:
@@ -61,6 +41,7 @@ def submit_form():
         conn.close()
         return jsonify({"success": True, "message": "Message saved successfully!"}), 200
     except Exception as e:
+        print(f"Database error: {str(e)}")  # Log DB errors
         return jsonify({"success": False, "error": str(e)}), 500
 
 # Run the Flask app

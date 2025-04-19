@@ -125,45 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// document.getElementById("contact-form").addEventListener("submit", function (event) {
-//     event.preventDefault();
-
-//     const name = document.getElementById("name").value.trim();
-//     const email = document.getElementById("email").value.trim();
-//     const message = document.getElementById("message").value.trim();
-//     const responseEl = document.getElementById("response-message");
-
-//     // Reset styles and hide it first
-//     responseEl.classList.remove("error", "success", "show");
-//     responseEl.style.display = "none";
-
-//     fetch("http://127.0.0.1:5000/submit-form", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({ name, email, message }),
-//     })
-//     .then((res) => res.json())
-//     .then((data) => {
-//         if (data.success) {
-//             responseEl.innerHTML = "<span class='emoji'>😊</span> Thank you for reaching out! I will get back to you soon.";
-//             responseEl.classList.add("success", "show");
-//         } else {
-//             responseEl.innerHTML = "<span class='emoji'>⚠️</span> Oops! Something went wrong. Please try again.";
-//             responseEl.classList.add("error", "show");
-//         }
-//         responseEl.style.display = "block"; // Make it visible
-//         document.getElementById("contact-form").reset();
-//     })
-//     .catch((err) => {
-//         responseEl.innerHTML = "<span class='emoji'>❗</span> There was an error. Please try again later.";
-//         responseEl.classList.add("error", "show");
-//         responseEl.style.display = "block"; // Make it visible
-//         console.error(err);
-//     });
-// });
-
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -176,36 +137,29 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     responseEl.classList.remove("error", "success", "show");
     responseEl.style.display = "none";
 
-    // Get reCAPTCHA token
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6LczMx4rAAAAANp_P7-DM_5VEAl4j6scDawzBOZ4', { action: 'submit' })
-            .then(function(token) {
-                // Send form data along with reCAPTCHA token to the server
-                fetch("http://127.0.0.1:5000/submit-form", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ name, email, message, token }),
-                })
-                .then((res) => res.json())
-                .then((data) => {
-                    if (data.success) {
-                        responseEl.innerHTML = "<span class='emoji'>😊</span> Thank you for reaching out! I will get back to you soon.";
-                        responseEl.classList.add("success", "show");
-                    } else {
-                        responseEl.innerHTML = "<span class='emoji'>⚠️</span> Oops! Something went wrong. Please try again.";
-                        responseEl.classList.add("error", "show");
-                    }
-                    responseEl.style.display = "block"; // Make it visible
-                    document.getElementById("contact-form").reset();
-                })
-                .catch((err) => {
-                    responseEl.innerHTML = "<span class='emoji'>❗</span> There was an error. Please try again later.";
-                    responseEl.classList.add("error", "show");
-                    responseEl.style.display = "block"; // Make it visible
-                    console.error(err);
-                });
-            });
+    fetch("http://127.0.0.1:5000/submit-form", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        if (data.success) {
+            responseEl.innerHTML = "<span class='emoji'>😊</span> Thank you for reaching out! I will get back to you soon.";
+            responseEl.classList.add("success", "show");
+        } else {
+            responseEl.innerHTML = "<span class='emoji'>⚠️</span> Oops! Something went wrong. Please try again.";
+            responseEl.classList.add("error", "show");
+        }
+        responseEl.style.display = "block"; // Make it visible
+        document.getElementById("contact-form").reset();
+    })
+    .catch((err) => {
+        responseEl.innerHTML = "<span class='emoji'>❗</span> There was an error. Please try again later.";
+        responseEl.classList.add("error", "show");
+        responseEl.style.display = "block"; // Make it visible
+        console.error(err);
     });
 });
