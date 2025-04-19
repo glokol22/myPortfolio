@@ -620,7 +620,8 @@ section.article-content {
 
 #contact h2 {
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -645,7 +646,7 @@ section.article-content {
 }
 
 #contact-form label {
-    margin-bottom: 6px;
+    margin-bottom: -2px;
     font-size: 12px;
 }
 
@@ -726,4 +727,95 @@ footer {
     font-size: 0.8rem;
     text-align: center;
     margin-bottom: auto;
+}
+
+
+
+#response-message {
+    font-weight: bold;
+    font-size: 0.6rem; 
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: none;
+    text-align: center;
+    width: 100%; 
+    max-width: 198px; 
+    margin: 1rem auto 0;
+    line-height: 1.5;
+    white-space: normal;
+    box-sizing: border-box;
+    overflow-wrap: break-word; 
+}
+
+
+/* Animation keyframes for sliding in */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Emoji bounce effect */
+#response-message .emoji {
+    display: inline-block;
+    margin-right: 0.5rem;
+    animation: bounceEmoji 0.6s ease forwards;
+}
+
+@keyframes bounceEmoji {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+
+
+/* Show message with animation */
+#response-message.show {
+    display: block;
+    animation: fadeSlideIn 1.4s ease forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Success style */
+#response-message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+/* Error style */
+#response-message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* Emoji bounce effect */
+#response-message .emoji {
+    display: inline-block;
+    margin-right: 0.5rem;
+    animation: bounceEmoji 1.6s ease forwards;
+}
+
+@keyframes bounceEmoji {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
 }
