@@ -61,7 +61,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Enable CORS (allows other devices to access it)
+CORS(app)  # Enable CORS
 
 # Database connection function
 def get_db_connection():
@@ -80,6 +80,7 @@ def submit_form():
     email = data.get('email')
     message = data.get('message')
 
+    # Store message in database
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
@@ -92,9 +93,11 @@ def submit_form():
         conn.close()
         return jsonify({"success": True, "message": "Message saved successfully!"}), 200
     except Exception as e:
-        print(f"Database error: {str(e)}")
+        print(f"Database error: {str(e)}")  # Log DB errors
         return jsonify({"success": False, "error": str(e)}), 500
 
-# Run the Flask app on your local network
+
+# Run the Flask app
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)  # 👈 THIS is what lets phones access it
+    # Allow access from all devices on the local network
+    app.run(host='0.0.0.0', port=5000, debug=True)
